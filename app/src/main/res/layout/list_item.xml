@@ -43,5 +43,5 @@
         android:id="@+id/list_item_icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:contentDescription="play"/>
+        android:contentDescription="@string/play"/>
 </LinearLayout>

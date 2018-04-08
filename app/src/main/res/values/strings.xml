@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Music</string>
+    <string name="clickYouTubeVideo">goto YouTube video</string>
+    <string name="song_tytle">Song tytle: </string>
+    <string name="description">description: </string>
+    <string name="artist">artist: </string>
+    <string name="play">play</string>
 </resources>

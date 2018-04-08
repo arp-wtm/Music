@@ -15,32 +15,34 @@
  */
 package com.example.antonella.music;
 
+import java.io.Serializable;
+
 /**
  * {@link Song} represents a single musical object.
- * It has 3 properties: song name, artist name, and image resource ID.
+ * It has 5 properties: id song (that is the code of song's youtube video)
+ * song name, artist name, image resource ID and description.
  */
-public class Song {
-
-    private String mSongName;
-
-    private String mArtist;
-
-    private int mImageResourceId;
-    private int mIdSong;
+public class Song implements Serializable {
+    private String idSong;
+    private String songName;
+    private String artist;
+    private int imageResourceId;
+    private String description;
 
     /*
      * Create a new Song object.
-     *
+     * @param idSong is the YuoTube code of the official video of the Song
      * @param vSongName is the tytle of the Song
      * @param vArtist is the corresponding name of artist singing it
      * @param image is drawable reference ID that corresponds to the play
      * */
 
-    Song(int vIdSong, String vSongName, String vArtist, int imageResourceId) {
-        mSongName = vSongName;
-        mArtist = vArtist;
-        mImageResourceId = imageResourceId;
-        mIdSong= vIdSong;
+    Song(String vIdSong, String vSongName, String vArtist, int vImageResourceId, String vDescription) {
+        idSong = vIdSong;
+        songName = vSongName;
+        artist = vArtist;
+        imageResourceId = vImageResourceId;
+        description = vDescription;
 
     }
 
@@ -48,25 +50,36 @@ public class Song {
      * Get the tytle of the Song
      */
     public String getSongName() {
-        return mSongName;
+        return songName;
     }
 
     /**
      * Get the name of the artist
      */
     public String getArtist() {
-        return mArtist;
+        return artist;
     }
 
     /**
      * Get the image resource ID
      */
     public int getImageResourceId() {
-        return mImageResourceId;
+        return imageResourceId;
     }
 
+    /**
+     * Get the IDSong
+     */
 
-    public int getIdSong() {
-        return mIdSong;
+    public String getIdSong() {
+        return idSong;
+    }
+
+    /**
+     * Get the description of the Song
+     */
+
+    public String getDescription() {
+        return description;
     }
 }
